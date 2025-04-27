@@ -211,10 +211,11 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ### c. Deploy to Vercel
 
-1. Push `vibe-finder/` to GitHub.  
+1. Push to github 
 2. Import repo in Vercel.  
 3. Set **Environment Variable** `NEXT_PUBLIC_API_URL` as above.  
-4. Deploy.
+4. Make vibe-finder as the root folder in Build and Deployment Settings.
+5. Deploy.
 
 ---
 
