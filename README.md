@@ -21,6 +21,9 @@
    precompute_similar.py      ↓
                               Firestore
 ```
+<p align="center">
+  <img src="VibeFinder.drawio(1).png" width="350" title="hover text">
+</p>
 
 1. **Python**: crawl Last.fm → train embeddings → push to Firestore  
 2. **AWS**: Lambda + API Gateway expose `/recommend?artist=`  
