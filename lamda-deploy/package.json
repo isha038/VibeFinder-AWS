@@ -1,0 +1,13 @@
+{
+  "name": "vibe-finder-lambda",
+  "version": "0.1.0",
+  "description": "AWS Lambda for music artist recommendations backed by Firestore",
+  "type": "module",
+  "main": "index.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "firebase-admin": "^13.3.0"
+  }
+}
