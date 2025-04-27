@@ -22,9 +22,17 @@ export default function Home() {
         throw new Error(json.error || 'Unknown error')
       }
       setResults(json.similar)
-    } catch (err: any) {
-      setError(err.message)
-    } finally {
+    }
+    catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } 
+      else {
+        setError('An unexpected error occurred.');
+        console.error('Caught an unknown error:', err);
+       }
+    } 
+     finally {
       setLoading(false)
     }
   }
@@ -72,7 +80,7 @@ export default function Home() {
       {results.length > 0 && (
         <div style={{ marginTop: '2rem' }}>
           <h2 style={{ marginBottom: '.5rem' }}>
-            Similar Artists to "{artist}"
+            Similar Artists to <strong>{artist}</strong>
           </h2>
           <ul>
             {results.map((a, i) => (
